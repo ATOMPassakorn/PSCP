@@ -1,0 +1,15 @@
+Semantic
+Runtime
+print("Hello World")
+operand
+operator
+float
+PEMDAS
+high
+int
+Navigator
+script
+interpreter
+string
+ThinkPython
+Syntax

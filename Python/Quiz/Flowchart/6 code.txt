@@ -1,0 +1,15 @@
+counter = 1
+num = int(input())
+while counter <= num:
+        if counter % 15 == 0:
+            print("FizzBuzz")
+            counter = counter + 1
+        elif counter % 5 == 0:
+            print("Buzz")
+            counter = counter + 1
+        elif counter % 3 == 0:
+            print("Fizz")
+            counter = counter + 1
+        else:
+            print(counter)
+            counter = counter + 1
