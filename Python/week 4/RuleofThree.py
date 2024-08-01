@@ -13,7 +13,7 @@ def rule():
             best_weight=weight
             value=weight/price
         elif weight/price==value:
-            best_price=min(price)
-            best_weight=min(weight)
+            best_price=min(price,best_price)
+            best_weight=min(weight,best_weight)
     print(f"{best_price:.2f} {best_weight:.2f}")
 rule()
