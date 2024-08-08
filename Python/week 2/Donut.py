@@ -8,8 +8,12 @@ def donut():
     box_set=d//(b+c)
     price=box_set*b*a
     buy=(b+c)*box_set
-    if buy < d:
+    remain=d-buy
+    if remain>=b:
         buy+=b+c
         price+=b*a
+    else:
+        buy+=remain
+        price+=remain*a
     print(f"{price} {buy}")
 donut()
