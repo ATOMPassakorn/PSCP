@@ -18,7 +18,7 @@ def parity():
                 bit_1+=1
         if not bit_1%2:
             number+="1"
-        elif bit_1==0:
+        elif not bit_1:
             number+="0"
         else:
             number+="0"
