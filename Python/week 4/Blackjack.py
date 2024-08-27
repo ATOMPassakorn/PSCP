@@ -11,7 +11,7 @@ def blackjack():
         elif card=="A":
             score+=11
             aces+=1
-        elif card.isnumeric():
+        else:
             score+=int(card)
     while score>21 and aces:
         score-=10
