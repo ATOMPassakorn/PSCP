@@ -12,8 +12,6 @@ def res():
             print("Yes")
         elif price_2==price_1:
             print("Yes")
-        elif price_2>price_1:
-            print(f"Yes {price_1-price_2:.3f}")
         elif price_2<price_1:
             print(f"No {price_1-price_2:.3f}")
     elif a+d>=b:

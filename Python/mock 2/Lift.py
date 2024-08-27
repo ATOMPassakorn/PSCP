@@ -14,9 +14,7 @@ def lift():
             kids+=1
         else:
             adult+=1
-    if kids and not adult:
-        print("Not Safe")
-    elif total>weigth:
+    if (kids and not adult) or total>weigth:
         print("Not Safe")
     else:
         print("Safe")
