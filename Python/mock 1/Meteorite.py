@@ -4,11 +4,11 @@ def meteorite():
     a=float(input())
     b=int(input())
     c=float(input())
-    shoot=1
-    for _ in range(b):
-        now_meteor=a/b
-        while now_meteor>c:
-            shoot+=1
-            now_meteor=now_meteor/b
+    shoot=0
+    meteor=1
+    while a>=c:
+        shoot+=meteor
+        meteor*=b
+        a/=b
     print(shoot)
 meteorite()
