@@ -9,8 +9,8 @@ def lotto():
     third4=input()
     number=input()
     total=0
-    near_1=str(int(first)-1)
-    near_2=str(int(first)+1)
+    near_1=f"{int(first)-1:06}"
+    near_2=f"{int(first)+1:06}"
     if number==first:
         total+=6_000_000
     if number[-2:]==sec:
@@ -24,14 +24,12 @@ def lotto():
     if number[-3:] == third4:
         total+=4_000
     if first == "000000":
-        near_1 = "000001"
-        near_2 = "999999"
+        near_1 = "999999"
+        near_2 = "000001"
     elif first == "999999":
         near_1 = "999998"
-        near_2 = "000000" 
-    if number == near_1:
-        total+=100_000
-    if number == near_2:
+        near_2 = "000000"
+    if number in (near_1 ,near_2):
         total+=100_000
     print(total)
 lotto()
