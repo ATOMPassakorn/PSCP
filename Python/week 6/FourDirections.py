@@ -1,66 +1,69 @@
 """FourDirections"""
-def up_form():
+def up_form(row):
     """up"""
-    for i in range(1,6):
-        for j in range(1,6):
-            if i in (1,4,5) and j==3:
-                print("*",end="")
-            elif i==2 and j in (2,3,4):
-                print("*",end="")
-            elif i==3 and j in (1,3,5):
-                print("*",end="")
-            else:
-                print(" ",end="")
-        print()
-def down_form():
+    result = ""
+    for j in range(1,6):
+        if row in (1,4,5) and j==3:
+            result+="*"
+        elif row==2 and j in (2,3,4):
+            result+="*"
+        elif row==3 and j in (1,3,5):
+            result+="*"
+        else:
+            result+=" "
+    return result
+def down_form(row):
     """down"""
-    for i in range(1,6):
-        for j in range(1,6):
-            if i in (1,2,5) and j==3:
-                print("*",end="")
-            elif i==3 and j in (1,3,5):
-                print("*",end="")
-            elif i==4 and j in (2,3,4):
-                print("*",end="")
-            else:
-                print(" ",end="")
-        print()
-def left_form():
+    result = ""
+    for j in range(1,6):
+        if row in (1,2,5) and j==3:
+            result+="*"
+        elif row==3 and j in (1,3,5):
+            result+="*"
+        elif row==4 and j in (2,3,4):
+            result+="*"
+        else:
+            result+=" "
+    return result
+def left_form(row):
     """left"""
-    for i in range(1,6):
-        for j in range(1,6):
-            if i in (1,5) and j==3:
-                print("*",end="")
-            elif i==3:
-                print("*",end="")
-            elif i in (2,4) and j==2:
-                print("*",end="")
-            else:
-                print(" ",end="")
-        print()
-def right_form():
+    result = ""
+    for j in range(1,6):
+        if row in (1,5) and j==3:
+            result+="*"
+        elif row==3:
+            result+="*"
+        elif row in (2,4) and j==2:
+            result+="*"
+        else:
+            result+=" "
+    return result
+def right_form(row):
     """right"""
-    for i in range(1,6):
-        for j in range(1,6):
-            if i in (1,5) and j==3:
-                print("*",end="")
-            elif i==3:
-                print("*",end="")
-            elif i in (2,4) and j==4:
-                print("*",end="")
-            else:
-                print(" ",end="")
-        print()
-def result():
+    result = ""
+    for j in range(1,6):
+        if row in (1,5) and j==3:
+            result+="*"
+        elif row==3:
+            result+="*"
+        elif row in (2,4) and j==4:
+            result+="*"
+        else:
+            result+=" "
+    return result
+def answer():
     """Print result"""
     text=input()
-    for i in text:
-        if i=="U":
-            print(up_form(),end=" ")
-        elif i=="L":
-            print(left_form(),end=" ")
-        elif i=="D":
-            print(down_form(),end=" ")
-        elif i=="R":
-            print(right_form(),end=" ")
-result()
+    for row in range(1, 6):
+        ans=""
+        for i in text:
+            if i=="U":
+                ans+=up_form(row)+" "
+            elif i=="L":
+                ans+=left_form(row)+" "
+            elif i=="D":
+                ans+=down_form(row)+" "
+            elif i=="R":
+                ans+=right_form(row)+" "
+        print(ans)
+answer()
