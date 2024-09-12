@@ -1,21 +1,21 @@
 """Stair"""
-def main():
+def stair():
     """Stair"""
-    can = int(input())
-    stair = int(input())
-    steps = 0
-    up = 0
-    for _ in range(stair):
-        h = int(input())
-        if up + h > can:
-            steps += 1
-            up = h
-            if up > can:
+    height=int(input())
+    steps=int(input())
+    count=0
+    current_height=0
+    for _ in range(steps):
+        stair_height=int(input())
+        if current_height+stair_height>height:
+            count+=1
+            current_height=stair_height
+            if current_height>height:
                 print("NO")
                 return
         else:
-            up += h
-    if up >= 0:
-        steps += 1
-    print(steps)
-main()
+            current_height+=stair_height
+    if current_height>=0:
+        count+=1
+    print(count)
+stair()
