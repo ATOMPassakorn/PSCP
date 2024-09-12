@@ -1,4 +1,5 @@
 """Coke"""
+import math as m
 def coke():
     """Coke"""
     a=int(input())
@@ -7,7 +8,9 @@ def coke():
     d=int(input())
     if not b:
         price=d*a
+    elif not d:
+        price=0
     else:
-        price=((d//b+1)*c)+((d-(d//b))*a)
+        price=((a*d)-(m.ceil((d-b)/b)*(a-c)))
     print(price)
 coke()
