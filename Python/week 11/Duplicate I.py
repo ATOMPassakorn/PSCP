@@ -1,25 +1,20 @@
 """Duplicate I"""
-def dup():
+def duplicate():
     """Duplicate I"""
     m = int(input())
     n = int(input())
-
-    group_1 =""
-    group_2 =""
-
+    first_set=set()
+    seconds_set=set()
     for _ in range(m):
-        student_id = input().strip()
-        group_1 += student_id + " "
-
+        student=int(input())
+        first_set.add(student)
     for _ in range(n):
-        student_id = input().strip()
-        if student_id in group_1:
-            group_2 += student_id + " "
-
-    group_2 = group_2.strip().split()
-    if group_2:
-        for student_id in sorted(group_2,reverse=True):
-            print(student_id)
+        student=int(input())
+        seconds_set.add(student)
+    intersect=sorted(first_set.intersection(seconds_set),reverse=True)
+    if intersect:
+        for i in intersect:
+            print(i)
     else:
         print("Nope")
-dup()
+duplicate()

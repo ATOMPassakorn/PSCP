@@ -8,6 +8,11 @@ def histogram():
     textdict = {}
     for i in text:
         if i != " ":
-            textdict[i]=textdict.get(i,0)+1
-    print(textdict.values())
+            if i in textdict:
+                textdict[i]+=1
+            else:
+                textdict[i]=1
+    sorted_text=sorted(textdict.keys(),key=sort_key)
+    for i in sorted_text:
+        print(f"{i} = {textdict[i]}")
 histogram()
