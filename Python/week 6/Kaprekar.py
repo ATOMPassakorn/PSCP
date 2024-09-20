@@ -1,8 +1,4 @@
 """Kaprekar"""
-def kaprekar():
-    """Kaprekar"""
-    number=input()
-    return number
 def most(number):
     """find most"""
     num1=""
@@ -25,8 +21,9 @@ def least(number):
         num2+=miz
         number = number.replace(miz, '', 1)
     return num2
-def find(number):
+def find():
     """find kaprekar"""
+    number=input()
     count=0
     result=0
     number=f"{int(number):04}"
@@ -37,5 +34,4 @@ def find(number):
         count+=1
         number = f"{result:04}"
     print(count)
-ans=kaprekar()
-find(ans)
+find()
